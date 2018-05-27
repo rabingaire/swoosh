@@ -76,6 +76,7 @@
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
             android:background="@drawable/switch_toggle"
+            android:fontFamily="@font/montserrat"
             android:onClick="onBallerClicked"
             android:text="Baller"
             android:textColor="@color/colorAccent"
