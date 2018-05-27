@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeagueActivity">
+    tools:context=".Controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -51,12 +51,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/mensLeagueButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/switch_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onMensClicked"
             android:text="Mens"
             android:textColor="@color/colorAccent"
             android:textOff="Mens"
@@ -65,7 +66,7 @@
             tools:layout_editor_absoluteY="178dp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/womensLeagueButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,17 +74,19 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/switch_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onWomensClicked"
             android:text="Womens"
             android:textColor="@color/colorAccent"
             android:textOff="Womens"
             android:textOn="Womens" />
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/coedLeagueButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/switch_toggle"
+            android:onClick="onCoedClicked"
             android:text="Co-Ed"
             android:textColor="@color/colorAccent"
             android:textOff="Co-Ed"
@@ -91,7 +94,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/leagueNextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -99,6 +102,7 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="leagueNextClicked"
         android:text="Next"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
